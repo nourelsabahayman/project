@@ -1,0 +1,289 @@
+body
+{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.back-color
+{
+    width:1024px;
+    min-height:100vh;
+    background:url(../images/58930.jpg);
+    background-size:cover;
+}
+.container
+{
+    width:100%;
+    height:100vh;
+    position: relative;
+    background:rgba(0, 0, 0, 0.3);
+    background-size: cover;
+}
+/*=============================End body============================*/
+.top
+{
+    width:700px;
+    height:480px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    display: flex;
+    border-radius:20px;
+    perspective: 600px;
+    overflow: hidden;
+    z-index:5;
+}
+/*==================End body all login====================*/
+form
+{
+    width:45%;
+    height:100%;
+    background:#eff3fd;
+    transition: all 1.1s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+/*======================End body form==========================*/
+form .img,h1
+{
+    text-align: center;
+}
+form  h1
+{
+    margin:10px auto 12px;
+    font-size:30px;
+    color: #514bce;
+}
+form  h1 span
+{
+    color: #141516;
+    font-size:35px;
+    border-bottom:3px solid #6c63ff;;
+}
+/*===========End h1 form===================*/
+form .img > img
+{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    cursor: pointer;
+}
+/*===========End img profile form===================*/
+input[name="text"]
+{
+    color: #042a68;
+    margin: 12px 15px;
+    padding-left:5px;
+    font-size:16px;
+    line-height:40px;
+    text-transform: lowercase;
+    background:transparent;
+    border:1px solid transparent; 
+    box-sizing: border-box;
+}
+input[name="text"]:hover
+{
+    border:1px solid #068; 
+    border-radius: 5px;
+    transition:all .6s ease-in-out;
+}
+input::placeholder
+{
+    color: #042a68;
+    padding-left:18px;
+    font-weight: 600;
+    opacity:.7;
+}
+/*===========End input form===================*/
+.button , .button2
+{
+    color:#fff;
+    margin:0 30px;
+    padding:7px 80px;
+    font-size:22px;
+    font-weight: 600;
+    border:none;
+    border-radius:10px;
+    background: linear-gradient(100deg,#1e4c97,#6f23b6);
+    transition:all .7s ease-in-out;
+}
+.button:hover ,.button2:hover
+{
+    cursor:pointer;
+    border-radius:50px 4px 50px;
+    background: linear-gradient(45deg,#2d0355,#5185da);
+    transition:all .7s ease-in-out;
+}
+/*===========End button form===================*/
+form p
+{
+    margin: 12px 8px 8px 8px;
+    font-size:15px;
+    color:#2b2f33;
+    font-weight:550
+}
+form .icon,.icon2
+{
+    width: 23px;
+    float: right;
+    cursor: pointer;
+}
+form .icon2
+{
+     margin:0 15px;
+}
+/*===========End icon form===================*/
+.transition,.transition2
+{
+    display: block;
+    color: #2b2f33;
+    margin:25px 0 ;
+    font-size:19px;
+    font-weight:550;
+    text-align: center;
+    border-bottom:3px solid transparent;
+}
+.transition,.transition2:hover
+{
+    color: rgb(6, 46, 59);
+    cursor: pointer;
+}
+/*===========End word transition form===================*/
+.img-victor
+{
+    width:60%;
+    height:100%;
+    cursor: pointer;
+    border-radius:0 20px 20px 0;
+    backface-visibility: hidden;
+    transition: all 3.5s;
+    transform-style: preserve-3d;
+}
+.img-victor:hover
+{
+    height:103%;
+    transform:translate(7px  , -10px) scale(1.1);
+    transition:all .6s ease-in-out;
+}
+/*===========End image form===================*/
+#r
+{
+    position: absolute;
+    top:-20%;
+    left:-20%;
+}
+#r:checked ~ .container > .top > form  
+{
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all 2s;
+}
+#r:checked ~ .container > .top > .img-victor
+{
+   transform: rotateY(-110deg);
+   transition: all 1s;
+}
+#r:checked ~ .container > .top
+{
+    visibility: hidden;
+}
+#r:checked ~  .container
+{
+    background: linear-gradient(45deg,#16222a,#3a6073);
+}
+#r:checked ~  .container > .create
+{
+    opacity:1;
+    transition: all 2s ease-in-out;
+}
+/*===========End checkbox transition form1 to form2===================*/
+/****************************End form1************************************************/
+.create
+{
+    width:500px;
+    height:450px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%); 
+    background: linear-gradient(45deg,#460fc5,#f74497);
+    border-radius:20px;
+    opacity:0;
+    transition: all 2s ease-in-out;
+}
+.create .back2
+{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius:20px;
+    background: url(../images/back2.png);
+    background-size:cover;
+}
+/*===========End body form2===================*/
+.create .back2 span
+{
+    color:#2d0355;
+    font-size:42px;
+    border-bottom:4px solid #068;
+}
+/*===========End h1>>span form===================*/
+input[name="text2"]
+{
+    margin:15px 15px 10px 15px;
+    padding:0 7px;
+    font-size:16px;
+    line-height:30px;
+    border-radius:20px;
+    border:2px solid transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .5) ;
+    background: rgb(243, 243, 243);
+    transition:all .5s ease-in-out;
+}
+input[name="text2"]:hover
+{
+    transform:translate(-5px,-5px);
+}
+/*===========End input-data form2===================*/
+input[type="radio"]
+{
+    margin:20px 0 0 20px;
+}
+.r
+{
+    color:#0b0842;
+    font-size:18px;
+    letter-spacing:1px;
+}
+/*===========End radio form2===================*/
+input[list="list"]
+{
+    width: 100px;
+    border-radius:10px;
+    padding:0 5px;
+    text-align: center;
+    border:2px solid #5185da;
+    margin-left: 15px
+}
+/*===========End list itme form2===================*/
+.button2
+{
+    margin:25px 28%;
+    background: linear-gradient(20deg,#aa0b0b,#32429b);
+}
+.button2:hover
+{
+    background: linear-gradient(45deg,#2d0355,#5185da);
+}
+/*===========End button form2===================*/
+.transition2
+{
+    margin:0 0 0 15px;
+    color:rgb(241, 238, 238);
+    text-align: left;
+    font-weight:500;
+}
